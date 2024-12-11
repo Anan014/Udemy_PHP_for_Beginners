@@ -15,66 +15,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-<form method="post">
+<form method="post" novalidate>
 
     <div>
-        text: <input type="text" name="surname" value="Bloggs">
+        postcode: <input name="postcode"
+        pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}"
+        title="Please enter a valid UK postcode">
     </div>
 
     <div>
-        password: <input type="password" name="password">
+        email: <input type="email" name="email" required>
     </div>
 
     <div>
-        tel: <input type="tel" name="telephone">
+        url: <input type="url" name="url">
     </div>
 
     <div>
-        url: <input type="url" name="web_address">
-    </div>
-
-    <div>
-        date: <input type="date" name="date">
-    </div>
-
-    <div>
-        time: <input type="time" name="time">
-    </div>
-
-    <div>
-        week: <input type="week" name="week">
-    </div>
-
-    <div>
-        color: <input type="color" name="colour">
-    </div>
-
-    <div>
-        email: <input type="email" name="email_address">
-    </div>
-
-    <div>
-        month: <input type="month" name="month">
-    </div>
-
-    <div>
-        range: <input type="range" name="range">
-    </div>
-
-    <div>
-        hidden: <input type="hidden" name="invisible" value="1234">
-    </div>
-
-    <div>
-        number: <input type="number" name="number">
-    </div>
-
-    <div>
-        search: <input type="search" name="search">
-    </div>
-
-    <div>
-        datetime-local: <input type="datetime-local" name="datetime">
+        number: <input type="number" name="count" min="1" max="10">
     </div>
 
     <button>Send</button>
