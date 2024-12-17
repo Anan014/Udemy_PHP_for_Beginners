@@ -37,4 +37,4 @@ if ($results === false) {
 <?php require 'includes/footer.php'; ?>
 
 
-<!-- sec 11 -->
+<!-- section 11 -->
