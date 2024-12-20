@@ -4,7 +4,7 @@ $name = "Radio";
 $desc = "A device for listening to radio broadcasts";
 $price = 14.99;
 
-$sql = "";  // 1. Write your SQL here
+$sql = "INSERT INTO product (name, description, price) VALUES (?, ?, ?)";  // 1. Write your SQL here
 
 $stmt = mysqli_prepare($conn, $sql);
 
@@ -14,11 +14,12 @@ if ($stmt === false) {
 
 } else {
 
-    $ret = mysqli_stmt_bind_param(   );  // 2. Add the arguments here
+    $ret = mysqli_stmt_bind_param($stmt, "ssd", $name, $desc, $price);  // 2. Add the arguments here
 
     if (mysqli_stmt_execute($stmt)) {
 
-        $id =  ;  // 3. Get the ID of the newly-inserted record here
+        $id = mysqli_insert_id($conn);
+        echo "New record inserted with ID: " . $id;
             
     }
 }
