@@ -37,3 +37,5 @@ if ($results === false) {
 <?php endif; ?>
 
 <?php require 'includes/footer.php'; ?>
+
+<!-- section 12 -->
